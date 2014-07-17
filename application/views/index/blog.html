@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="public/img/favicon.png"> 
+        <title>Nick'website-谢阳林的个人网站</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="<?php echo base_url()?>public/css/bootstrap.min.css" rel="stylesheet">
+          <link href="<?php echo base_url()?>public/css/blog.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+           <script type='text/javascript' src="<?php echo base_url();?>public/js/respond.min.js"></script>
+        <![endif]--> 
+
+        <!-- CSS code from Bootply.com editor -->
+  <!--loading the background-->      
+<style type="text/css">
+body#content{
+  background: url("<?php echo base_url()?>public/img/background.png");
+}
+    .round{
+         border-radius: 8px;
+    }
+</style>
+    </head>
+    
+    <!-- HTML code from Bootply.com editor -->
+    
+    <body id="content" >
+        <div id="nav">
+<!-- 插入菜单 -->
+<?php $this->load->view('index/menu-fixed.html')?>
+<!-- 插入菜单 -->
+        </div>
+ 
+  <div class="container well well-sm">
+    <div class="row">
+         <div class="col-md-1">
+        </div>
+      <div class="col-md-7">
+      <h1 >Blog-博客 </h1>
+         <blockquote >
+        <p class="font-small">我在很多网站都写东西最早是QQ空间, 还有一些地方 &amp; <br>轻博客上面也有经常写，常去的如 <a href="http://www.diandian.com/">点点轻博客</a><br> </p>
+    </blockquote>
+           </div>
+      <div class="col-md-4">
+           <div class="panel panel-body hidden-xs"> 
+            <form class="form-inline" method="post" action="<?php echo base_url() ;?>index/search/index" >
+                <button type="submit" class="btn btn-info btn-lg pull-right"><i class="glyphicon glyphicon-search"></i></button>
+              <input type="text" class="form-control input-lg pull-left" placeholder="Search" name="text" required>
+            </form>     
+        </div>
+      </div>
+  </div><!-- /cont -->
+  
+ </div>
+
+  <div class="row">
+        <div class="col-md-1 col-sm-1">
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <div class="panel round">
+                   <ul ><h3 >文章:</h3>
+                   <?php foreach ($article as $a):?>
+                  <li class="text-success font-middle">   
+                      <a class="text-info"href="<?php echo site_url('index/home/article/'.$a['a_id']) ?>">
+                      <?php echo $a['a_title'] ?>
+                    </a>
+                  </li>
+                 <?php endforeach;?>
+                </ul>
+          </div>
+        </div>
+
+
+
+    <div class="col-md-7 clo-sm-7">     
+      <div class="panel">
+        <div class="panel-body">          
+          <!--/stories-->
+          <?php foreach ($article as $a):?>
+      <div class="row">    
+            <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-img" href="<?php echo site_url('index/home/article/'.$a['a_id']) ?>">
+                    <img src="<?php echo $a['a_thumb'] ;?>" style="width:100px;" class="img-circle">
+              </a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3 class="text-success"><?php echo $a['a_title'] ?></h3>
+            <div class="row">
+                <div class="col-xs-12">
+                  <p><?php echo $a['a_info'] ?></p>
+                  <p class="lead pull-right">
+                      <a href="<?php echo site_url('index/home/article/'.$a['a_id']) ?>"><i class="glyphicon glyphicon-eye-open"></i> 更多...</a>
+                  </p>
+                 <p>时间：<?php echo date('y年m月d日 h:i:s',$a['a_time']) ?></p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <hr>
+        <?php endforeach;?>
+
+          <!--/stories-->
+        
+          
+        </div>
+      </div>
+                                                                                                                                       
+    </div><!--/col-md-9-->
+        <div class="col-md-1 col-sm-1">
+      </div>
+  </div>
+                                                
+                                                                              
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+<!--share button-->
+
+<!--share button-->
+     <h1 class="text-info">找到我：</h1>
+      <div class="btn-group">
+       <a class="btn btn-qq " href="http://user.qzone.qq.com/641593845/main"><i class="icon-twitter icon-large"></i> qq空间</a>
+       <a class="btn btn-weibo " href=" http://weibo.com/u/2128613860"><i class="icon-facebook icon-large"></i> 微博</a>
+       <a class="btn btn-douban " href="http://www.douban.com/people/69476451/"><i class="icon-google-plus icon-large"></i>豆瓣</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<ul class="nav pull-right scroll-top hidden-xs">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+<!-- 脚注 -->
+<?php $this->load->view('index/footer.html')?>
+        
+      
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="<?php echo base_url();?>public/js/home.js"></script>
+
+
+
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor -->
+        
+    </body>
+</html>

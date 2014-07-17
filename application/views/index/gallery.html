@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <title>Nick'website-谢阳林的个人网站</title> 
+<link rel="shortcut icon" href="<?php echo base_url();?>public/img/favicon.png"> 
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo base_url()?>public/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap-image-gallery.min.css">
+<link rel="stylesheet" href="<?php echo base_url()?>public/css/gallery.css">
+     <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+           <script type='text/javascript' src="<?php echo base_url();?>public/js/respond.min.js"></script>
+        <![endif]--> 
+
+<style type="text/css">
+ body#content{
+  background: url("<?php echo base_url()?>public/img/background.png");
+} 
+</style>
+</head>
+<body id="content">
+    <div id="nav">
+  <!-- 插入菜单 -->
+ <?php $this->load->view('index/menu-fixed.html')?>
+ <!-- 插入菜单 -->
+    </div>
+
+  
+  <div class="container ">
+  <div class="row">
+    <div class="col-md-2 col-sm-3">
+          </div>
+      <div class="col-md-9 col-sm-8 well well-sm">
+    <h1>Gallery-画廊</h1>
+    <blockquote>
+        <p>我在很多地方展示了各种各样的图片比如 <a href="http://www.tuchong.com/">图虫网</a>, 当然还有一些地方 &amp; <br>轻博客上面也有一些比如 <a href="http://www.lofter.com/">网易轻博客</a> 我从2013年开始喜欢摄影开始玩photoshop <br> 摄影是一种生活态度，体现对这个世界的美的观察，我们需要艺术的东西</p>
+    </blockquote>
+    <form class="form-inline">
+      <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-success ">
+            <i class="glyphicon glyphicon-leaf"></i>
+            <input id="borderless-checkbox" type="checkbox">效果
+          </label>
+          <label class="btn btn-primary ">
+            <i class="glyphicon glyphicon-fullscreen"></i>
+            <input id="fullscreen-checkbox" type="checkbox">全屏
+          </label>
+        </div>
+     <!--  <div class="form-group pull-right">
+            <button id="image-gallery-button" type="button" class="btn btn-danger ">
+                <i class="glyphicon glyphicon-picture"></i>
+               幻灯片
+            </button>
+        </div>   -->
+        
+    </form>
+  </div>
+    <br>
+  </div>
+</div>
+    <!--use the section to scroll-->
+    <!--test area-->
+    
+
+    
+     
+    
+<!-- Begin Body -->
+  <div class="row">
+        <div class="col-md-3 hidden-xs" >
+           
+              <div class="panel nav nav-stacked affix" id="sidebar">
+                <ul ><h2 class="text-danger">&nbsp;分类</h2>
+                  <?php foreach($category as $cate):?>
+                <li class="font-middle"><a href="#<?php echo $cate['gc_id']?>">
+                  <?php echo $cate['gc_name']?></a></li>
+                <?php endforeach;?>
+                </ul>
+            </div>
+          </div>  
+          <div class="col-md-7 col-xs-12">
+                   <?php foreach($category as $cate):?>
+                <div id="<?php echo $cate['gc_id']?>" class="well well-sm">
+                <div id="links">
+                      <h3 class="text-center text-success"><?php echo $cate['gc_name']?></h3>
+                  <a href="<?php echo $cate['gc_thumb'];?>" title="<?php echo $cate['gc_name']?>" data-gallery="">
+                    <img src="<?php echo $cate['gc_thumb'];?>"style="float:left;width:100%"/>
+                  </a>
+                </div>
+                    <p class="lead text-center"><a href="<?php echo site_url('index/home/picture/'.$cate['gc_id'])?>">查看分类</a></p>
+              
+                <p class="text-center"><?php echo $cate['gc_info']?></p>
+               <p class="text-center"><?php echo date('y年m月d日 h:i:s',$cate['gc_time']) ?></p>
+              </div>
+                <?php endforeach;?>
+
+                
+                
+          </div> 
+
+        </div>
+
+
+
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">  hello world </h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="nav pull-right scroll-top hidden-xs">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+<!-- 脚注 -->
+<?php $this->load->view('index/footer.html')?>
+   
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>public/js/blueimp-gallery.min.js"></script>
+<script src="<?php echo base_url();?>public/js/bootstrap-image-gallery.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>public/js/gallery.js"></script>
+<script type='text/javascript' src="<?php echo base_url();?>public/js/home.js"></script>
+</body> 
+</html>

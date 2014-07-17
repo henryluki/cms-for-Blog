@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+ <html xmlns:wb="http://open.weibo.com/wb">
+    <head>
+      
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title>Nick'website-谢阳林的个人网站</title> 
+        <link rel="shortcut icon" href="<?php echo base_url()?>public/img/favicon.png"> 
+       <meta property="wb:webmaster" content="d1c614c8948268c3" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+       <!-- 最新 Bootstrap 核心 CSS 文件 -->
+       <link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap.min.css">
+       <link rel="stylesheet" href="<?php echo base_url()?>public/css/home.css">
+        <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2359996372" type="text/javascript" charset="utf-8"></script>
+         
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->      
+         <!--add some background css-->
+<style type="text/css">
+header {
+  background: url("<?php echo base_url()?>public/img/background.png");
+ /* background: #f16251;*/
+  height:400px;
+  color:#000000;
+}
+  .bg-1 {
+  background: url("<?php echo base_url()?>public/img/b1.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg-2 {
+  background: url("<?php echo base_url()?>public/img/b2.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg-3 {
+  background: url("<?php echo base_url()?>public/img/b2.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg-4 {
+  padding-top:30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20,20,20,0.2)),to(rgba(255,255,255,0)), color-stop(1,#000));
+}
+
+    </style>
+    </head>
+   
+    <!-- HTML code from Bootply.com editor -->
+    
+    <body  >
+        
+        <!-- Wrap all page content here -->
+
+<div id="wrap">
+<header class="masthead">
+<!--   菜单项 -->
+ <nav class="navbar navbar-default navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand nav-link" href="<?php echo site_url() ;?>">Nick'website</a>
+        </div> <!-- /.navbar-header -->
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-lift">
+              <li><a href="<?php echo site_url("index/home/blog");?>">Blog-博客</a></li>
+              <li><a href="<?php echo site_url("index/home/gallery");?>">Gallery-画廊</a></li>
+          </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="<?php echo site_url("xieyanglin/login");?>">Login<i class="glyphicon glyphicon-user">登录</i></a></li>
+          </ul>
+        </div> <!-- /.navbar-collapse -->
+      </div> <!-- /.container -->
+    </nav> <!-- /.navbar -->
+ <!--   菜单项 -->  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1><a href="<?php echo site_url()?>" title="谢阳林的个人网站">Nick'website</a></h1>
+        <img src="<?php echo site_url()?>public/img/people.jpg"class="img-circle"/><h3 class="lead font-middle">{谢阳林的个人网站}</h3>
+       
+
+      </div>
+      <div class="col-sm-6">
+        <div class="pull-right  hidden-xs">    
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3><i class="glyphicon glyphicon-cog"></i></h3></a>
+          <ul class="dropdown-menu">
+              <li><a class="font-middle"href="http://weibo.com/2128613860/profile?topnav=1&wvr=5&user=1"><i class="glyphicon glyphicon-chevron-right"></i>微博</a></li>
+              <li><a class="font-middle"href="http://225317.diandian.com/"><i class="glyphicon glyphicon-user"></i>点点</a></li>
+              <li><a class="font-middle"href="http://tuchong.com/344139/"><i class="glyphicon glyphicon-lock"></i>图虫</a></li>
+              <li><a class="font-middle"href="http://225317.lofter.com/"><i class="glyphicon glyphicon-cog"></i>LOFTER</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+</header>
+  
+  
+<!-- Fixed 主页菜单 navbar -->
+<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+          <li><a href="#section1">Home</a></li>
+          <li><a href="#section2">introduction</a></li>
+          <li><a href="#section3">blog</a></li>
+          <li class="active"><a class="font-middle"href="#section1"><strong>Big Brand</strong></a></li>
+          <li><a href="#section4">gallery</a></li>
+          <li><a href="#section5">Contact</a></li>
+            </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+</div><!--/.navbar -->
+  
+<!-- Begin page content -->
+<div class="divider" id="section1"></div>
+  
+<div class="container">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="page-header text-center">
+      <h1>Nick'website</h1>
+    </div>
+      <div class="text-center">
+      <p >我是<a id="wb_card_alone" wb_screen_name="henry_luki" href="#" >henry_luki</a>，
+          这是我第一个网站。Nick'website 是一个cms内容管理小网站，相比流行的WordPress逊色很多，因为使用了php和MYSQL，通过后台登陆即可操作网站前台数据而不要修改源代码。</p>
+      <p>这是一个个人网站，网站使用了bootstrap前端框架，CodeIgniter后端框架（php），两门框架都很好用。</p>
+      <p>网页是响应式的，因此，手机访问或者平板电脑访问，浏览体验都是不错的。当然，如果你用的是ie,且版本低点的话，部分功能将会出错。</p>
+      <p>这是我的第一个网站，做这个所花时间不多，前端设计灵感来自于互联网，大概花了三天。后端代码纯手写，为此花了很长时间。</p>
+      <p>当然，后台不能对外开放，考虑到安全，管理
+      员也只有我一位。设计与功能或许还不足，还有些功能或许待改善，望大家提意见!</p>
+      </div>
+   
+  </div>
+</div>
+    
+<div class="divider" id="section2"></div>
+  
+<section class="bg-1">
+  <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">“如果你想看到这一切”</h2></div>
+</section>
+  
+<div class="divider"></div>
+   
+<div class="container" id="section3">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      <h1>Blog-博客</h1>
+      
+     <!--  增加显示一条最新文章 -->
+     <div class="text-center">
+      <p class="font-small text-success">最近更新：</p>
+      <h3>【<a href="<?php echo site_url('index/home/article/'.$article[0]['a_id']) ?>">
+        <?php echo $article[0]['a_title']?></a>】</h3>
+         <p>“<?php echo $article[0]['a_info'] ?>”</p>
+         <p class="text-info"><?php echo date('y年m月d日 h:i:s',$article[0]['a_time'])?></p>
+       </div>     
+      
+      <hr>
+    </div><!--/col-->
+</div><!--/container-->
+
+<div class="divider"></div>
+  
+<section class="bg-2" id="section4">
+  <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Gallery-画廊</h2></div>
+</section>
+  
+<div class="continer bg-4">
+  <div class="row">
+      <p class="font-small text-success text-center">最新图片：</p>
+    <!-- 动态显示最新三张图片 -->
+    <?php foreach ($category as $cate):?> 
+     <div class="col-sm-4 col-xs-6">
+      
+        <div class="panel panel-default">
+          <div> 
+            <a href="<?php echo site_url('index/home/gallery')?>" title="<?php echo $cate['p_info']?>" data-gallery="">
+                <img class="img-responsive"src="<?php echo $cate['p_name'];?>"style="float:left;width:450px;height:300px"/>
+                  </a>
+                </div>
+          <div class="panel-body text-center">
+            <p class="lead text-success">分类：<?php echo $cate['gc_name'] ;?></p>
+            <p>"<?php echo $cate['p_info']?>"</p>
+              <p class="text-info"><?php echo date('y年m月d日 h:i:s',$cate['p_time']) ?></p>
+          </div>
+        </div><!--/panel-->
+      </div><!--/col-->
+     <?php  endforeach;?> 
+
+  </div><!--/row-->
+</div><!--/container-->
+
+<div class="divider" id="section5"></div>
+
+<div class="row">
+
+  <h1 class="text-center">Where are you ?</h1>
+
+  <div id="map-canvas"></div>
+  
+  <hr>
+  
+  <div class="col-sm-8">
+      
+      <div class="row form-group">
+        <div class="col-xs-5">
+          <input type="text" class="form-control"  name="nickname" placeholder="昵称" required="">
+        </div>
+        <div class="col-xs-5">
+          <input type="text" class="form-control"  name="name" placeholder="姓名" required="">
+        </div>
+      </div>
+      <div class="row form-group">
+          <div class="col-xs-5">
+          <input type="email" class="form-control" name="email" placeholder="邮箱" required="">
+          </div>
+          <div class="col-xs-5">
+          <input type="email" class="form-control" name="phone" placeholder="手机号码" required="">
+          </div>
+      </div>
+      <div class="row form-group">
+          <div class="col-xs-10">
+          <input type="homepage" class="form-control" placeholder="个人网址" required="">
+          </div>
+      </div>
+      <div class="row form-group">
+          <div class="col-xs-10">
+            <button class="btn btn-default pull-right">联系我</button>
+          </div>
+      </div>
+    
+  </div>
+  <div class="col-sm-3 pull-right">
+
+      <address>
+        <strong>Nick</strong><br>
+        深圳大学<br>
+        计算机科学与技术<br>
+        本科
+      </address>
+    
+      <address>
+        <strong>Email me</strong><br>
+        <a href="mailto:#">iamamiracle55@gmail.com</a>
+      </address>          
+  </div>
+  
+</div><!--/row-->
+
+<div class="container">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+        <h2>脚注</h2>
+      
+      <hr>
+      <h3>
+         “ 很高兴见到你 &nbsp;去你家玩好吗&nbsp;想得美”
+       
+      </h3>
+     
+      
+      
+    </div><!--/col-->
+</div><!--/container-->
+  
+</div><!--/wrap-->
+<ul class="nav pull-right scroll-top">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+<!-- 脚注 -->
+<?php $this->load->view('index/footer.html')?>
+
+<script type="text/javascript">
+WB2.anyWhere(function(W){
+    W.widget.hoverCard({
+        id : "wb_card_auto",
+        search: true
+    });
+});
+</script>
+        
+  <script type='text/javascript' src="<?php echo base_url();?>public/js/jquery-2.0.2.min.js"></script>
+
+
+   <script type='text/javascript' src="<?php echo base_url();?>public/js/bootstrap.min.js"></script>
+
+  <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+          <!-- JavaScript jQuery code from Bootply.com editor -->
+        
+    <script type='text/javascript' src="<?php echo base_url();?>public/js/home.js"></script>
+        
+    </body>
+</html>

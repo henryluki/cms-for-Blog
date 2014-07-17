@@ -1,0 +1,5 @@
+name: nickwebsite
+version: 2
+handle:
+- rewrite:  if(!is_dir() && !is_file() && path~"/") goto "/index.php%{QUERY_STRING}"
+- rewrite:  if ( !is_dir() && !is_file() && path ~ "index/home/blog" ) goto "blog"

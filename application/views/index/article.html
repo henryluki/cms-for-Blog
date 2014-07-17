@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:wb="http://open.weibo.com/wb">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="<?php echo base_url()?>public/img/favicon.png"> 
+        <title>Nick'website-谢阳林的个人网站</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="<?php echo base_url()?>public/css/bootstrap.min.css" rel="stylesheet">
+          <link href="<?php echo base_url()?>public/css/blog.css" rel="stylesheet">
+          <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2359996372" type="text/javascript" charset="utf-8"></script>
+      
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+           <script type='text/javascript' src="<?php echo base_url();?>public/js/respond.min.js"></script>
+        <![endif]--> 
+
+        <!-- CSS code from Bootply.com editor -->
+  <!--loading the background-->      
+<style type="text/css">
+body#content{
+  background: url("<?php echo base_url()?>public/img/dash.png");
+}
+ img{
+        max-width:100%;
+        height:auto;
+}
+ .round{
+         border-radius: 8px;
+    }
+.uyan{
+  background-color: #ededed;
+  padding:5px;
+}
+</style>
+</head>
+    <body id="content" >
+        <header id="nav">
+          <!-- 插入菜单 -->
+ <?php $this->load->view('index/menu-fixed.html')?>
+ <!-- 插入菜单 -->
+      </header>
+  <div class="row">         
+            
+            <div class="col-md-1 col-sm-1">
+            </div>
+            <div class="col-md-7 col-sm-7">
+                <div class="panel">
+              <div class="panel-body">
+              <h1 class="text-success text-center"><?php echo $article[0]['a_title'] ?></h1>
+              <div class="row">
+                <div class="col-xs-12">
+                  <p><?php echo $article[0]['a_content'] ?></p>
+                  <p class="panel">发表时间：<?php echo date('y年m月d日',$article[0]['a_time']) ?></p>
+                  <hr>
+
+                  </div>
+              </div>
+            </div>     
+        </div>
+         <!-- UY BEGIN -->
+          <wb:comments url="<?php echo site_url('index/home/article/'. $article[0]['a_id']) ?>" width="auto"appkey="2359996372"></wb:comments>
+         <!-- UY END -->   
+      </div>
+               <div class="col-md-3 col-sm-3">
+                <div class="panel round">
+                   <ul><h2>文章:</h2>
+                       <?php foreach ($title as $a):?>
+                     <li class="font-middle text-success">
+                      <a class=" text-info"href="<?php echo site_url('index/home/article/'.$a['a_id']) ?>"><?php echo $a['a_title'] ?> 
+                    </a>
+                  </li>
+                 <?php endforeach;?>
+                </ul>
+          </div>
+        </div>
+          <hr>
+          <!--/stories--> 
+                                                                                                                                       
+   	</div><!--/col-12-->
+
+                                              
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+     <h1 class="text-info">找到我：</h1>
+      <div class="btn-group">
+       <a class="btn btn-qq " href="http://user.qzone.qq.com/641593845/main"><i class="icon-twitter icon-large"></i> qq空间</a>
+       <a class="btn btn-weibo " href=" http://weibo.com/u/2128613860"><i class="icon-facebook icon-large"></i> 微博</a>
+       <a class="btn btn-douban " href="http://www.douban.com/people/69476451/"><i class="icon-google-plus icon-large"></i>豆瓣</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<ul class="nav pull-right scroll-top hidden-xs">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+<!-- 脚注 -->
+<?php $this->load->view('index/footer.html')?>
+      
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="<?php echo base_url();?>public/js/home.js"></script>
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?type=left&amp;move=0&amp;btn=l2.gif&amp;uid=1397789169843149" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+        
+    </body>
+</html>
